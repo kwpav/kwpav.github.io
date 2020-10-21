@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Restarting with ox-hugo - (kpavs notes)</title><meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:description" content="" />
+	<meta name="twitter:description" content="" />
+	<meta name="description" content="" />
+	<meta name="description" content="" />
+
+	<meta property="og:title" content="Restarting with ox-hugo | (kpavs notes)" />
+	<meta name="twitter:title" content="Restarting with ox-hugo | (kpavs notes)" />
+
+	<meta property="og:image" content=""/>
+	<meta itemprop="name" content="Restarting with ox-hugo | (kpavs notes)" />
+	<meta name="application-name" content="Restarting with ox-hugo | (kpavs notes)" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:title" content="Restarting with ox-hugo" />
+<meta property="og:description" content="Hello World v2.0 I have had some extra time on my hands in the past few months due to COVID, so one of the things I decided to do to keep my mind occupied was to restart this site. My goal is to post something every few months at least, so I wanted to come up with at least three posts before I really thought about how I was going to handle the technical side of things." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kwpav.github.io/posts/restarting-with-ox-hugo/" />
+<meta property="article:published_time" content="2020-10-20T23:43:00-05:00" />
+<meta property="article:modified_time" content="2020-10-20T23:43:00-05:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Restarting with ox-hugo"/>
+<meta name="twitter:description" content="Hello World v2.0 I have had some extra time on my hands in the past few months due to COVID, so one of the things I decided to do to keep my mind occupied was to restart this site. My goal is to post something every few months at least, so I wanted to come up with at least three posts before I really thought about how I was going to handle the technical side of things."/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://kwpav.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://kwpav.github.io/css/dark.css"  />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://kwpav.github.io/">(kpavs notes)</a>
+	</div>
+	<nav>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Restarting with ox-hugo</h1>
+			<div class="meta">Posted on Oct 20, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<h2 id="hello-world-v2-dot-0">Hello World v2.0</h2>
+<p>I have had some extra time on my hands in the past few months due to COVID, so one of the things I decided to do to keep my mind occupied was to restart this site. My goal is to post something every few months at least, so I wanted to come up with at least three posts before I really thought about how I was going to handle the technical side of things.</p>
+<p>I&rsquo;ve found that I like to work on multiple posts/ideas at once for blogging, so I wanted to a way to keep everything in a single place. I decided to use a single <code>.org</code> file in its own git repository. This way I can see everything at a glance, quickly organize things, and keep it separate from the actual blog site. I can also take advantage of org&rsquo;s use of hierarchies for tags and properties and such.</p>
+<p>As of now, my <code>blog-posts.org</code> has three main headers with posts beneath:</p>
+<ol>
+<li><strong>Published</strong> - published posts, each post under this has a status of <code>DONE</code></li>
+<li><strong>In Progress</strong> - posts I am currently working on, each post under this has a status of <code>DRAFT</code></li>
+<li><strong>Ideas</strong> - any ideas for future posts, each idea under this has a status of <code>TODO</code></li>
+</ol>
+<p>Currently, <strong>Ideas</strong> is a dumping ground of things that I may or not make posts of, and some quick thoughts of things the post might contain. Once I have a good idea of what I want the post to be, I&rsquo;ll move it to <strong>Published</strong>, start outlining it, and go from there. It may get disorganized in the future, but it is working well for me so far.</p>
+<p>Of course, I failed at my goal of not thinking about the technical side things, as I started working on generating static sites using Clojure. I have been looking for a good reason to really learn Clojure and this sounded like a great project for it, so I started hacking on something and I was able to get a prototype working, but I figured it would take too long to actually get it where I wanted.</p>
+<p>That&rsquo;s when I realized that the org file I had would work perfectly with <a href="https://ox-hugo.scripter.co/">ox-hugo</a>. It allows you to keep all your posts in a single file and it uses org&rsquo;s export capability to output it to hugo parseable markdown. After reading the documentation of both <code>hugo</code> and <code>ox-hugo</code>, I was able to get something working super quickly. I only had to make minor changes to my org file.</p>
+<h2 id="using-ox-hugo">Using ox-hugo</h2>
+<p>I was up and running after these 3 changes:</p>
+<ul>
+<li>Add this to the top of the org file:</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#75715e">#+hugo_base_dir</span><span style="color:#75715e">: ../personal-website/</span>
+<span style="color:#75715e">#+property</span><span style="color:#75715e">: header-args :eval never-export</span>
+</code></pre></div><p>The file containing all my posts and the hugo site are both seperate folders in my <code>~/projects/</code> directory, so I am pointing <code>#+hugo_base_dir</code> to the hugo site there.</p>
+<ul>
+<li>Add this under post headers:</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#75715e">**</span> Restarting with ox-hugo
+<span style="color:#75715e">:PROPERTIES:
+</span><span style="color:#75715e"></span><span style="color:#75715e">:EXPORT_FILE_NAME: restarting-with-ox-hugo
+</span><span style="color:#75715e"></span><span style="color:#75715e">:END:</span>
+</code></pre></div><ul>
+<li>Add the <code>:noexport:</code> tag to the <strong>In Progress</strong> and <strong>Ideas</strong> headers:</li>
+</ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org">*<span style="font-weight:bold"> In Progress</span><span style="font-style:italic"> :noexport:</span>
+</code></pre></div><p>This way only posts beneath the <strong>Published</strong> header will work.</p>
+<p>To have the date on the post, <code>ox-hugo</code> takes the date from the <code>DONE</code> status. You need have <code>org-log-done</code> set to <code>'time</code> in Emacs for this to work.</p>
+<p>Now, I can press <code>C-c C-e H A</code> and the posts export all sub-headers under <strong>Published</strong> with the <code>:EXPORT_FILE_NAME:</code> property into <code>hugo</code> posts. Minimal changes to the file, and now I have a working site. Awesome!</p>
+<h2 id="org-capture">Org Capture</h2>
+<p>Another advantage of having all the blog posts in a single file is that you can take advantage of capture templates. Luckily, <code>ox-hugo</code> provides some nice examples of them <a href="https://ox-hugo.scripter.co/doc/org-capture-setup/">here</a>.</p>
+<p>I am just getting into using <code>org-capture</code> so I am using the one provided there modified to fit my file structure.</p>
+<h2 id="final-thoughts-and-the-future">Final Thoughts and the Future</h2>
+<p>Now that I&rsquo;ve got a setup I like, I will continue working on some posts and keep hacking away on the Clojure version of the site. I really like how all the posts are in a single file right now, so I&rsquo;d like to keep using <code>ox-hugo</code> (or a modified version of it). I am still in the early stages of things though, so we will see where it goes!</p>
+<p>So&hellip; Stay tuned! I have some posts on getting started with StumpWM and configuring Emacs for writing in the works.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+<hr>⚡️
+	2020  © Kevin Pavao |  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
+
+
+</div>
+    </body>
+</html>

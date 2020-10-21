@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Kevin Pavao</copyright>
-    <lastBuildDate>Sun, 23 Sep 2018 22:24:00 -0500</lastBuildDate><atom:link href="https://kwpav.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Oct 2020 23:43:00 -0500</lastBuildDate><atom:link href="https://kwpav.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Restarting with ox-hugo</title>
+      <link>https://kwpav.github.io/posts/restarting-with-ox-hugo/</link>
+      <pubDate>Tue, 20 Oct 2020 23:43:00 -0500</pubDate>
+      
+      <guid>https://kwpav.github.io/posts/restarting-with-ox-hugo/</guid>
+      <description>Hello World v2.0 I have had some extra time on my hands in the past few months due to COVID, so one of the things I decided to do to keep my mind occupied was to restart this site. My goal is to post something every few months at least, so I wanted to come up with at least three posts before I really thought about how I was going to handle the technical side of things.</description>
+    </item>
+    
     <item>
       <title>Pelican and Org Mode</title>
       <link>https://kwpav.github.io/posts/pelican-and-org/</link>

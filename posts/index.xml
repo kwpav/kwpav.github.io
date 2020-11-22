@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Kevin Pavao</copyright>
-    <lastBuildDate>Tue, 20 Oct 2020 23:43:00 -0500</lastBuildDate><atom:link href="https://kwpav.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Nov 2020 14:13:00 -0600</lastBuildDate><atom:link href="https://kwpav.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.emacs Refinancing (or creating the base of an Emacs config)</title>
+      <link>https://kwpav.github.io/posts/emacs_refinancing/</link>
+      <pubDate>Sun, 22 Nov 2020 14:13:00 -0600</pubDate>
+      
+      <guid>https://kwpav.github.io/posts/emacs_refinancing/</guid>
+      <description>Whether to Declare Bankruptcy or to Refinance In the Emacs community, there is something called .emacs bankruptcy, which is when your init file gets too large and cumbersome that you need start over from scratch. As someone who tends to love messing with config files a little too much, I knew that I would eventually run into this if I started really using Emacs. That is why, when I really started to use Emacs, started with a literate config file in org-mode and used use-package for configuration.</description>
+    </item>
+    
     <item>
       <title>Restarting with ox-hugo</title>
       <link>https://kwpav.github.io/posts/restarting-with-ox-hugo/</link>

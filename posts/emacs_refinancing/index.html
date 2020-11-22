@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>.emacs Refinancing (or creating the base of an Emacs config) - (kpavs notes)</title><meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:description" content="" />
+	<meta name="twitter:description" content="" />
+	<meta name="description" content="" />
+	<meta name="description" content="" />
+
+	<meta property="og:title" content=".emacs Refinancing (or creating the base of an Emacs config) | (kpavs notes)" />
+	<meta name="twitter:title" content=".emacs Refinancing (or creating the base of an Emacs config) | (kpavs notes)" />
+
+	<meta property="og:image" content=""/>
+	<meta itemprop="name" content=".emacs Refinancing (or creating the base of an Emacs config) | (kpavs notes)" />
+	<meta name="application-name" content=".emacs Refinancing (or creating the base of an Emacs config) | (kpavs notes)" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:title" content=".emacs Refinancing (or creating the base of an Emacs config)" />
+<meta property="og:description" content="Whether to Declare Bankruptcy or to Refinance In the Emacs community, there is something called .emacs bankruptcy, which is when your init file gets too large and cumbersome that you need start over from scratch. As someone who tends to love messing with config files a little too much, I knew that I would eventually run into this if I started really using Emacs. That is why, when I really started to use Emacs, started with a literate config file in org-mode and used use-package for configuration." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kwpav.github.io/posts/emacs_refinancing/" />
+<meta property="article:published_time" content="2020-11-22T14:13:00-06:00" />
+<meta property="article:modified_time" content="2020-11-22T14:13:00-06:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=".emacs Refinancing (or creating the base of an Emacs config)"/>
+<meta name="twitter:description" content="Whether to Declare Bankruptcy or to Refinance In the Emacs community, there is something called .emacs bankruptcy, which is when your init file gets too large and cumbersome that you need start over from scratch. As someone who tends to love messing with config files a little too much, I knew that I would eventually run into this if I started really using Emacs. That is why, when I really started to use Emacs, started with a literate config file in org-mode and used use-package for configuration."/>
+
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://kwpav.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://kwpav.github.io/css/dark.css"  />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://kwpav.github.io/">(kpavs notes)</a>
+	</div>
+	<nav>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">.emacs Refinancing (or creating the base of an Emacs config)</h1>
+			<div class="meta">Posted on Nov 22, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<h2 id="whether-to-declare-bankruptcy-or-to-refinance">Whether to Declare Bankruptcy or to Refinance</h2>
+<p>In the Emacs community, there is something called <a href="https://www.emacswiki.org/emacs/DotEmacsBankruptcy">.emacs bankruptcy</a>, which is when your init file gets too large and cumbersome that you need start over from scratch. As someone who tends to love messing with config files a little too much, I knew that I would eventually run into this if I started really using Emacs. That is why, when I really started to use Emacs, started with a literate config file in <code>org-mode</code> and used <code>use-package</code> for configuration.</p>
+<p>It works really well, but after several years, I started to realize it was beginning to fill with cruft, my startup time seemed to be increasing, and I was running into some random issues. I have also learned a bit more about Emacs since I started, so I figured it was time to take another look at things and see what I could improve.</p>
+<p>I didn&rsquo;t want to declare &ldquo;bankruptcy&rdquo;, as there are still many things I want to keep, but there were some parts I knew that I needed  to clean up. So I decided to &ldquo;refinance&rdquo; &ndash; instead of starting over, I wanted to keep the core of what I had, and repay some of the &ldquo;technical debt&rdquo; I had built up. I started a new org file and copied over some of my &ldquo;base&rdquo; settings and packages.  I also decided to start only with basic Emacs stuff, no language setup. I went through the documentation of everything, removed things I thought were unnecessary, put everything I could into <code>use-package</code>, and then wrote what it does and why I was using it.</p>
+<h2 id="basemacs"><code>basemacs</code></h2>
+<p>After working on it for a while and seeing some posts on <a href="https://www.reddit.com/r/emacs/">r/emacs</a> asking how to build your own config like doom or spacemacs, I figured someone could get some use out of this besides me. Thus, <a href="https://github.com/kwpav/basemacs">basemacs</a> was born.</p>
+<p>I&rsquo;ve tried to keep it as unopinionated as possible, it sets some sane defaults and uses a minimal set of (but what I would consider essential) packages like <code>magit</code>, <code>company</code>, <code>flycheck</code>, and <code>which-key</code>. It&rsquo;s still a work in progress: I should probably add some better documentation/description for things, I am considering adding modules, and there are probably some other things I could include and improve. But there it is, maybe someone will find it useful.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+<hr>⚡️
+	2020  © Kevin Pavao |  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
+
+
+</div>
+    </body>
+</html>
